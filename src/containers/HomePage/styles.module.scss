@@ -1,0 +1,14 @@
+$title_font_size: 32px;
+
+.container{
+  padding: 3% 10%;
+
+  .title{
+    width: 100%;
+    text-align: center;
+
+    h2{
+      font-size: $title_font_size;
+    }
+  }
+}
