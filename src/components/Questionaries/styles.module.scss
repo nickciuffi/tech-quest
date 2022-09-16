@@ -1,0 +1,16 @@
+.quests{
+  padding: 0 100px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 20px;
+  column-gap: 40px;
+  justify-content: space-evenly;
+}
+
+
+@media screen and (max-width: 780px) {
+  .quests{
+    grid-template-columns: auto;
+  }
+}
