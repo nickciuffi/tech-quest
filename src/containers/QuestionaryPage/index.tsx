@@ -12,7 +12,7 @@ export function QuestionaryPage(props: QuestProps) {
     <>
       <Header theme="purple" />
       <div className={style.container}>
-        {props.data.questions ? (
+        {props.data ? (
           <>
             <h1 className={style.title}>{props.data.title}</h1>
 

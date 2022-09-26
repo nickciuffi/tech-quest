@@ -33,6 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const paths = allQuestionaries.map((q) => ({
     params: { id: `${q.id}` },
   }));
+  console.log(paths);
   return {
     paths: paths,
     fallback: true,

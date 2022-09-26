@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 import { AnswersBox } from '../AnswersBox';
 import { MainGameHeader } from '../MainGameHeader';
 import { PageSetters } from '../PageSetters';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/router';
 
 type MainGameProps = {
@@ -61,17 +59,6 @@ export function MainGame({ data }: MainGameProps) {
         page={page}
         amountOfQuestions={data.length}
         finishQuestionary={finishQuestionary}
-      />
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
       />
     </div>
   );
