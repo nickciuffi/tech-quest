@@ -1,4 +1,5 @@
 import { HomePage } from '../containers/HomePage';
+import { getQuestionaries } from '../data/requests/getQuestionaries';
 
 type HomeProps = {
   quests: [
@@ -15,10 +16,7 @@ export default function Home({ quests }: HomeProps) {
 }
 
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-  const res = await fetch('http://35.238.25.150');
-  const quests = await res.json();
+  const quests = await getQuestionaries('');
 
   return {
     props: {

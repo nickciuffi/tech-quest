@@ -1,0 +1,31 @@
+.header{
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .exit-btn{
+    background-color: red;
+    color: #fff;
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    height: min-content;
+    cursor: pointer;
+  }
+  .title{
+    margin-top: 5px;
+    font-size: 26px;
+    width: 75%;
+    text-align: center;
+  }
+  .quest-num{
+    font-size: 26px;
+  }
+}

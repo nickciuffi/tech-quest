@@ -1,0 +1,28 @@
+.answer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6E657A;
+  border: 2px #fff solid;
+  padding: 8px;
+  cursor: pointer;
+
+  p{
+    font-size: 20px;
+  }
+
+  input[type=checkbox]{
+    display: none;
+  }
+  label{
+    background-color: antiquewhite;
+    height: 18px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked + label{
+    background-color: #432c62;
+  }
+
+}

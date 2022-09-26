@@ -1,6 +1,7 @@
 
 .container{
   padding: 40px 10%;
+  min-height: calc(100% - 70px);
   background-image: linear-gradient(#3C3C3D, #293B57);
 
   .title{

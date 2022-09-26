@@ -1,0 +1,24 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+
+  .setter{
+    cursor: pointer;
+    &.right{
+      margin-left: auto;
+    }
+  }
+  .finish-btn{
+    padding: 10px 12px;
+    height: min-content;
+    background-color: #833CAE;
+    color: #fff;
+    font-size: 23px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+}
