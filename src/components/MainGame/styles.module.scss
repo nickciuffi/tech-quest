@@ -4,6 +4,13 @@
   background-color: #4D4954;
   border: 3px #fff solid;
   border-radius: 22px;
-  padding: 20px;
+  padding: 10px 30px;
 
+}
+
+@media screen and (max-width: 760px){
+  .container{
+    width: 100%;
+    padding: 10px;
+  }
 }

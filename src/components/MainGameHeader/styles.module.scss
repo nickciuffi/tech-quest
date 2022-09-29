@@ -1,9 +1,12 @@
 .header{
 
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
+  div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0px -10px 10px -10px;
+  }
   .exit-btn{
     background-color: red;
     color: #fff;
@@ -19,13 +22,34 @@
     height: min-content;
     cursor: pointer;
   }
-  .title{
-    margin-top: 5px;
+  .title-desk{
+    margin-top: 15px;
     font-size: 26px;
     width: 75%;
     text-align: center;
+
+  }
+  .title-mob{
+    display:none;
   }
   .quest-num{
     font-size: 26px;
   }
+}
+
+@media screen and (max-width: 760px){
+  .header{
+    margin: 10px 10px 10px 10px;
+
+  .title-desk{
+    display: none;
+  }
+  .title-mob{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
 }

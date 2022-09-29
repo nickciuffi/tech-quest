@@ -26,3 +26,9 @@
   bottom: 40px;
   position: absolute;
 }
+
+@media screen and (max-width: 760px){
+  .container{
+    padding: 40px 5%;
+  }
+}

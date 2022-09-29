@@ -27,3 +27,19 @@
   cursor: pointer;
   letter-spacing: 2px;
 }
+
+@media  screen and (max-width: 760px) {
+
+  .desc{
+    margin-top: 40px;
+  }
+  .container{
+    height: 65%;
+
+    .startbutton{
+      width: 90%;
+      padding: 30px;
+    }
+  }
+
+}

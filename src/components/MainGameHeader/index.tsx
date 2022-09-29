@@ -13,12 +13,17 @@ export function MainGameHeader({ data, page }: MainGameHeaderProps) {
   }
 
   return (
-    <div className={style.header}>
-      <Link href={'/'}>
-        <button className={style['exit-btn']}>EXIT</button>
-      </Link>
-      <h2 className={style.title}>{data[page].text}</h2>
-      <h2 className={style['quest-btn']}>{getPage()}</h2>
-    </div>
+    <>
+      <div className={style.header}>
+        <div>
+          <Link href={'/'}>
+            <button className={style['exit-btn']}>EXIT</button>
+          </Link>
+          <h2 className={style['title-desk']}>{data[page].text}</h2>
+          <h2 className={style['quest-btn']}>{getPage()}</h2>
+        </div>
+        <h2 className={style['title-mob']}>{data[page].text}</h2>
+      </div>
+    </>
   );
 }
