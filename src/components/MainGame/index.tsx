@@ -5,6 +5,8 @@ import { AnswersBox } from '../AnswersBox';
 import { MainGameHeader } from '../MainGameHeader';
 import { PageSetters } from '../PageSetters';
 import { useRouter } from 'next/router';
+import Swal from 'sweetalert2';
+import { qtdQuestions } from '../../config/appConfig';
 
 type MainGameProps = {
   data: QuestionProps[];
@@ -40,9 +42,35 @@ export function MainGame({ data }: MainGameProps) {
   }
 
   function finishQuestionary() {
-    const correctAnswers = getCorrectAnswers(data);
-    const score = getFinalScore(correctAnswers, userAnswers);
-    router.push(`/result/${score}`);
+    if (userAnswers.length < qtdQuestions) {
+      return Swal.fire({
+        title:
+          'Are you sure you want to finish this questionary with answers missing?',
+        showDenyButton: false,
+        showConfirmButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Finish',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const correctAnswers = getCorrectAnswers(data);
+          const score = getFinalScore(correctAnswers, userAnswers);
+          router.push(`/result/${score}`);
+        }
+      });
+    }
+    Swal.fire({
+      title: 'Are you sure you want to finish this questionary?',
+      showDenyButton: false,
+      showConfirmButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Finish',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const correctAnswers = getCorrectAnswers(data);
+        const score = getFinalScore(correctAnswers, userAnswers);
+        router.push(`/result/${score}`);
+      }
+    });
   }
 
   return (
