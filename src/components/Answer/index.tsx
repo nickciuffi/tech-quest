@@ -29,7 +29,6 @@ export function Answer({ ans, changeAnswer, isChecked }: AnswerProps) {
         className="checkbox"
         id={`checkbox${ans.id}`}
         type="checkbox"
-        onChange={() => console.log('I Changed')}
       />
       <label htmlFor={`checkbox${ans.id}`} />
     </div>

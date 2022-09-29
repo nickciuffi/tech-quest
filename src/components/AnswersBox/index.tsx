@@ -19,7 +19,6 @@ export function AnswersBox({
     const ansToChange = [...userAnswers];
     ansToChange[questId] = id;
     setUserAnswers(ansToChange);
-    console.log(userAnswers);
   }
 
   return (
