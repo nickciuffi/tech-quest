@@ -2,13 +2,11 @@ import { Questionary } from '../Questionary';
 import styles from './styles.module.scss';
 
 type QuestionariesProps = {
-  quests: [
-    {
-      id: number;
-      title: string;
-      description: string;
-    },
-  ];
+  quests: {
+    id: number;
+    title: string;
+    description: string;
+  }[];
 };
 
 export function Questionaries(props: QuestionariesProps) {

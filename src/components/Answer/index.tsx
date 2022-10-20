@@ -1,13 +1,13 @@
-import { AnswersProps } from '../../types/questionary';
+import { AnswerProps } from '../../types/answer';
 import style from './styles.module.scss';
 
-type AnswerProps = {
-  ans: AnswersProps;
+type AnswersProps = {
+  ans: AnswerProps;
   changeAnswer: (id: number) => void;
   isChecked: boolean;
 };
 
-export function Answer({ ans, changeAnswer, isChecked }: AnswerProps) {
+export function Answer({ ans, changeAnswer, isChecked }: AnswersProps) {
   function handleClick() {
     const checkboxes = document.querySelectorAll('.checkbox');
     Array.from(checkboxes).map((check: HTMLInputElement) => {

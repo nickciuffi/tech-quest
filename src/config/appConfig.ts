@@ -1,3 +1,2 @@
-export const apiLocation =
-  'https://tech-quest-api.nickciuffi.xyz/questionaries';
+export const apiLocation = 'https://tech-quest-api.nickciuffi.xyz';
 export const qtdQuestions = 4;

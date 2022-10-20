@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { QuestionProps } from '../../types/questionary';
+import { QuestionWithAnswers } from '../../types/question';
 import style from './styles.module.scss';
 
 type MainGameHeaderProps = {
-  data: QuestionProps[];
+  data: QuestionWithAnswers[];
   page: number;
 };
 

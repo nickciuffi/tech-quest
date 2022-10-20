@@ -1,4 +1,3 @@
-import { QuestionProps } from '../../types/questionary';
 import style from './styles.module.scss';
 import React, { useState } from 'react';
 import { AnswersBox } from '../AnswersBox';
@@ -7,22 +6,24 @@ import { PageSetters } from '../PageSetters';
 import { useRouter } from 'next/router';
 import Swal from 'sweetalert2';
 import { qtdQuestions } from '../../config/appConfig';
+import { QuestProps } from '../../types/questionary';
+import { Question, QuestionWithAnswers } from '../../types/question';
+import { getQuestionsWithAnswers } from '../../data/requests/getQuestionsWithAnswers';
 
 type MainGameProps = {
-  data: QuestionProps[];
+  data: QuestionWithAnswers[];
 };
 
 export function MainGame({ data }: MainGameProps) {
   const [page, setPage] = useState(0);
   const [userAnswers, setUserAnswers] = useState<number[]>([]);
-
-  const answers = data ? data[page].answers : [];
+  const answers = data.length > 0 ? data[page].answers : [];
   const router = useRouter();
 
-  function getCorrectAnswers(questions: QuestionProps[]): number[] {
+  function getCorrectAnswers(questions: QuestionWithAnswers[]): number[] {
     const corrects = questions.map((quest) =>
       quest.answers.reduce((acum, ans) => {
-        if (ans.isCorrect) {
+        if (ans.is_correct) {
           return ans.id;
         }
         return acum + 0;

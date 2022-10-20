@@ -16,11 +16,12 @@ export default function Home({ quests }: HomeProps) {
 }
 
 export async function getStaticProps() {
-  const quests = await getQuestionaries('');
+  const quests = await getQuestionaries();
 
   return {
     props: {
       quests,
     },
+    revalidate: 10,
   };
 }

@@ -8,13 +8,10 @@ type QuestionaryData = {
 };
 
 export async function getQuestionaries(
-  query: string,
+  query?: string,
 ): Promise<QuestionaryData[]> {
-  const data = await axios.get<QuestionaryData[]>(`${apiLocation}/${query}`);
-  return data.data as QuestionaryData[];
-}
-
-export async function getAllQuestionaries(): Promise<QuestionaryData[]> {
-  const data = await axios.get<QuestionaryData[]>(`${apiLocation}`);
+  const data = await axios.get<QuestionaryData[]>(
+    `${apiLocation}/questionaries/${query ? query : ''}`,
+  );
   return data.data as QuestionaryData[];
 }

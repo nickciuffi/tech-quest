@@ -1,9 +1,9 @@
-import { AnswersProps } from '../../types/questionary';
+import { AnswerProps } from '../../types/answer';
 import { Answer } from '../Answer';
 import style from './styles.module.scss';
 
 export type AnswersBoxProps = {
-  answers: AnswersProps[];
+  answers: AnswerProps[];
   userAnswers: number[];
   setUserAnswers: (ans: number[]) => void;
   questId: number;
