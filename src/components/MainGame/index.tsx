@@ -6,9 +6,7 @@ import { PageSetters } from '../PageSetters';
 import { useRouter } from 'next/router';
 import Swal from 'sweetalert2';
 import { qtdQuestions } from '../../config/appConfig';
-import { QuestProps } from '../../types/questionary';
-import { Question, QuestionWithAnswers } from '../../types/question';
-import { getQuestionsWithAnswers } from '../../data/requests/getQuestionsWithAnswers';
+import { QuestionWithAnswers } from '../../types/question';
 
 type MainGameProps = {
   data: QuestionWithAnswers[];

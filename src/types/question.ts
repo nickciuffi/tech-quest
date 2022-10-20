@@ -1,4 +1,4 @@
-import { Answer } from './answer';
+import { AnswerProps } from './answer';
 
 export type Question = {
   id: number;
@@ -7,5 +7,5 @@ export type Question = {
 export type QuestionWithAnswers = {
   id: number;
   text: string;
-  answers: Answer[];
+  answers: AnswerProps[];
 };
