@@ -1,6 +1,6 @@
 # tech-quest
 
-This is a project to practice my **Next.js**, **Typescript** and **Node.js** abilities.
+This is a project to practice my **Next.js**, **Typescript** and **Node.js** abilities. <br>
 This project has three parts: 
 1- The front-end, which you can see in this repository;
 2- the back-end: https://github.com/nickciuffi/tech-quest-api;
