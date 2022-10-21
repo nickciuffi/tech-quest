@@ -25,7 +25,11 @@ export function QuestionaryPage(props: questProps) {
             <h1 className={style.title}>{props.questionary.title}</h1>
 
             {isGameStarted ? (
-              <MainGame data={props.questionary.questions} />
+              props.questionary.questions.length > 0 ? (
+                <MainGame data={props.questionary.questions} />
+              ) : (
+                <div>This Questionary has no Questions yet</div>
+              )
             ) : (
               <GameStarter
                 setIsGameStarted={setIsGameStarted}
