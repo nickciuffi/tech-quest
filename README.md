@@ -8,7 +8,7 @@ This project has three parts: <br>
 
 # Tech stack:
 
-For the front-end I used Next.js to create static pages and get a faster rendered website.
+For the front-end I used Next.js to create static pages and get a faster rendered website. <br>
 It was also used figma for the design and SASS for styling.
 
 # Conclusion
