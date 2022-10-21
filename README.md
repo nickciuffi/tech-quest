@@ -14,3 +14,7 @@ It was also used figma for the design and SASS for styling.
 # Conclusion
 
 Although this is the main part of the project, it was actually the easiest one to create, because it is just a consumer of a very complex group of data.
+
+# Take a look
+
+Link: https://tech-quest.nickciuffi.xyz/
