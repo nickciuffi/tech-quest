@@ -10,6 +10,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
           rel="stylesheet"
         />
+        <title>Tech-quest</title>
       </Head>
       <body className="body">
         <Main />
