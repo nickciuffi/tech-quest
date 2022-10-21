@@ -16,6 +16,17 @@ type questProps = {
 export function QuestionaryPage(props: questProps) {
   const [isGameStarted, setIsGameStarted] = useState<boolean>(false);
 
+  function hasCompleteAnswers(q: QuestionWithAnswers[]): boolean {
+    let hasComplete = true;
+    q.forEach((quest) => {
+      if (quest.answers.length !== 4) {
+        hasComplete = false;
+        return;
+      }
+    });
+    return hasComplete;
+  }
+
   return (
     <>
       <Header theme="purple" />
@@ -25,10 +36,13 @@ export function QuestionaryPage(props: questProps) {
             <h1 className={style.title}>{props.questionary.title}</h1>
 
             {isGameStarted ? (
-              props.questionary.questions.length > 0 ? (
+              props.questionary.questions.length > 3 &&
+              hasCompleteAnswers(props.questionary.questions) ? (
                 <MainGame data={props.questionary.questions} />
               ) : (
-                <div>This Questionary has no Questions yet</div>
+                <h3 style={{ marginTop: '20px' }}>
+                  This Questionary has no Questions yet
+                </h3>
               )
             ) : (
               <GameStarter

@@ -31,9 +31,11 @@ export default function Questionary(props: questProps) {
 export const getStaticProps: GetStaticProps = async ({
   params,
 }: ContextType) => {
-  const quests = await getQuestionsWithAnswers(params.id);
+  let quests = await getQuestionsWithAnswers(params.id);
+  if (typeof quests === 'string') {
+    quests = [];
+  }
   const quest = await getQuestionaries(params.id);
-  console.log(quests);
   return {
     props: {
       questionary: {
