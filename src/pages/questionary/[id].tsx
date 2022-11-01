@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps = async ({
         questions: quests,
       },
     },
-    revalidate: 200,
+    revalidate: 50,
   };
 };
 
